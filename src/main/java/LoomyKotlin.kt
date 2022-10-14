@@ -45,7 +45,7 @@ object LoomyKotlin {
         Origami.init()
         val images = Objects.requireNonNull(
             Paths.get("images").toFile()
-                .listFiles { dir: File?, name: String -> name.endsWith("png") or name.endsWith("jpg") })
+                .listFiles { _: File?, name: String -> name.endsWith("png") or name.endsWith("jpg") })
         val start = System.currentTimeMillis()
         when (mode) {
             1 -> {
